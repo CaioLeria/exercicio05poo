@@ -1,2 +1,3 @@
-package BilheteUnico;public class Main {
+package BilheteUnico;
+public class Main {
 }
