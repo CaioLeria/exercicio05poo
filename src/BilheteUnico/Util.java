@@ -110,6 +110,9 @@ public class Util {
                    case 2:
                        listarBilhete();
                        break;
+                   case 3:
+                       removerBilhete();
+                       break;
                }
            }
         }while(opcao!=4);
@@ -138,6 +141,17 @@ public class Util {
             mensagem+="--------------------------------------------------------------------"+"\n";
         }
     showMessageDialog(null,mensagem);
+    }
+    private void removerBilhete(){
+        int posicao = pesquisa();
+        int resposta;
+        if (posicao!=-1){
+            resposta = showConfirmDialog(null, "tem certeza que deseja remover?");
+            if (resposta == YES_OPTION){
+                bilhete[posicao]=bilhete[index-1];
+                index--;
+            }
+        }
     }
     }
 
